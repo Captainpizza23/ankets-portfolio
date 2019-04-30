@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Anket Waswani - Cover Page</title>
+    <title>{{ blog.title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -46,49 +46,20 @@
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="http://linkedin.com/in/anket-waswani-7773008b">LinkedIn</a>
           <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}">Resume</a>
-          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+          <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
         </div>
       </div>
     </nav>
 </header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Hi, I'm Anket. Welcome to my Python Development Portfolio.</h1>
-      <p class="lead text-muted">I am a Mechanical Engineering graduate with a keen interest in programming languages and software development. I'm a self taught programmer that mainly uses Python for web app development and data analysis. This website was made by using Django to demonstare my abilities in web development. Below are previews of the projects I've developed using python. If you'd like to read an in-depth description of each project, please visit my blog which is on the navigation menu above.</p>
-      <p>
-        <a href="mailto:anket.m@live.com" class="btn btn-primary my-2">Email Me</a>
-        <a href="https://api.whatsapp.com/send?phone=971506608172" class="btn btn-primary my-2">Whatsapp Contact</a>
-      </p>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-    <br />
-    <h2>Latest Python Projects</h2>
-    <hr>
-    </div>
-  </section>
-  <div class="album py-5">
-    <div class="container">
-      <div class="row">
-
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="img-fluid" src="{{ job.image.url }}"/>
-            <div class="card-body">
-              <p>{{ job.summary }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
+  <div class="container">
+  <h2 class='text-center pt-3'>{{ blog.title }}</h2>
+  <p class='text-center'>{{ blog.pub_date_pretty }}</p>
+  <img class="img-fluid rounded mx-auto d-block" src="{{ blog.image.url }}" height = 350 width = 300/>
+  <br>
+  <p>{{ blog.body }}</p>
+</div>
 </main>
 
 <footer class="text-muted">
