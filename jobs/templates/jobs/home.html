@@ -44,8 +44,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="#">LinkedIn</a>
-          <a class="nav-item nav-link" href="#">Twitter</a>
           <a class="nav-item nav-link" href="#">Resume</a>
+          <a class="nav-item nav-link" href="#">Blog</a>
         </div>
       </div>
     </nav>
@@ -56,24 +56,30 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hi, I'm Anket. Welcome to my Python Development Portfolio.</h1>
-      <p class="lead text-muted">I am a Mechanical Engineering graduate with a keen interest in programming languages and software development. I'm a self taught programmer that mainly uses Python for web app development and data analysis. This website was created with Django and Bootstrap. Other projects I've worked on are mentioned below.</p>
+      <p class="lead text-muted">I am a Mechanical Engineering graduate with a keen interest in programming languages and software development. I'm a self taught programmer that mainly uses Python for web app development and data analysis. This website was made by using Django to demonstare my abilities in web development. Below are previews of the projects I've developed using python. If you'd like to read an in-depth description of each project, please visit my blog which is on the navigation menu above.</p>
       <p>
         <a href="mailto:anket.m@live.com" class="btn btn-primary my-2">Email Me</a>
         <a href="https://api.whatsapp.com/send?phone=971506608172" class="btn btn-primary my-2">Whatsapp Contact</a>
       </p>
     </div>
   </section>
-
-  <div class="album py-5 bg-light">
+  <section>
+    <div class="container">
+    <br />
+    <h2>Python Projects</h2>
+    <hr>
+    </div>
+  </section>
+  <div class="album py-5">
     <div class="container">
       <div class="row">
 
         {% for job in jobs.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" src="{{ job.image.url }}" />
+            <img class="img-fluid" src="{{ job.image.url }}"/>
             <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
+              <p>{{ job.summary }}</p>
             </div>
           </div>
         </div>
