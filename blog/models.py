@@ -5,6 +5,7 @@ class Blog(models.Model):
     pub_date = models.DateTimeField()
     body = models.TextField()
     image = models.ImageField(upload_to='images/')
+    code_image = models.ImageField(upload_to='images/')
 
     def pub_date_pretty(self):
         return self.pub_date.strftime('%b %e %Y')

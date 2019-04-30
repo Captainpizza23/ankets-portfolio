@@ -56,9 +56,12 @@
   <div class="container">
   <h2 class='text-center pt-3'>{{ blog.title }}</h2>
   <p class='text-center'>{{ blog.pub_date_pretty }}</p>
-  <img class="img-fluid rounded mx-auto d-block" src="{{ blog.image.url }}" height = 350 width = 300/>
+  <img class="img-fluid rounded mx-auto d-block" src="{{ blog.image.url }}"/>
   <br>
-  <p>{{ blog.body }}</p>
+  <br>
+  <img class="img-fluid rounded mx-auto d-block" src="{{ blog.code_image.url }}"/>
+  <br>
+  <p class="text-justify">{{ blog.body }}</p>
 </div>
 </main>
 

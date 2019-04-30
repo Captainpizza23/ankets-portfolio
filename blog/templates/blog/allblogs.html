@@ -63,7 +63,7 @@
   {% for blog in blogs.all %}
   <h4><a href="{% url 'detail' blog.id %}">{{ blog.title }}</a></h4>
   {{ blog.pub_date_pretty }}
-  <img class="img-fluid rounded mx-auto d-block" src="{{ blog.image.url }}" height=350 width=300/>
+  <img class="img-fluid rounded mx-auto d-block" src="{{ blog.image.url }}"/>
   <br>
   <p>{{ blog.body }}</p>
   {% endfor %}
